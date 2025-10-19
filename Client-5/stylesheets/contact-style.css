@@ -1,0 +1,202 @@
+@import 'defaults.css';
+
+body {
+  font-family: var(--primary-font);
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-black);
+}
+
+.contact {
+    width: 100%;
+    padding: 2.2rem 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact > div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-sec {
+    gap: 2rem;
+}
+
+.titles {
+    text-align: center;
+}
+
+.titles > h1 {
+    font-size: var(--text-5xl);
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.titles > h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-medium);
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 2rem;
+}
+
+.contact-info span {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-semibold);
+}
+
+.contact-info p {
+    font-size: var(--text-2xl);
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container > img {
+    width: 10rem;
+    height: auto;
+}
+
+.right-sec {
+    gap: 2rem;
+    align-items: center;
+}
+
+.img-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.right-sec > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+}
+
+.right-sec > form input {
+    padding: 1rem .5rem;
+    font-family: var(--primary-font);
+    color: var(--text-black);
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+    width: 100%;
+}
+
+form input::placeholder, form textarea::placeholder {
+    font-family: var(--primary-font);
+    font-weight: var(--font-medium);
+    color: var(--text-black);
+    font-size: var(--text-lg);
+}
+
+.right-sec > form textarea {
+    padding: .8rem .5rem;
+    resize: unset;
+    height: 6rem;
+    width: 100%;
+    font-family: var(--primary-font);
+    font-size: var(--text-lg);
+}
+
+.inputs-container > button {
+    background-color: var(--accent-color);
+    color: white;
+    font-family: var(--primary-font);
+    font-size: var(--text-xl);
+    padding: .6rem;
+    width: 100%;
+}
+
+.inputs-container > button:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+footer {
+    margin: 2rem 0 1rem 0;
+}
+
+footer p {
+    text-align: center;
+    font-size: var(--text-xl);
+}
+
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+
+    .contact > div {
+        width: 100%;
+    }
+
+    .left-sec {
+        align-items: center;
+    }
+
+    .img-container {
+        display: none;
+    }
+
+    .right-sec {
+        margin-top: 3rem;
+    }
+
+    .right-sec form {
+        width: 60%;
+    }
+
+    .contact-info > p {
+        font-size: var(--text-xl);
+    }
+
+    .contact-info > span {
+        font-size: var(--text-xxl);
+    }
+}
+
+@media (max-width: 425px) {
+    .right-sec form {
+        width: 90%;
+    }
+
+    .contact-info > p {
+        font-size: var(--text-md);
+    }
+
+    .contact-info span {
+        font-size: var(--text-xxl);
+    }
+
+    .titles h1 {
+        font-size: var(--text-3xl);
+    }
+
+    .titles h2 {
+        font-size: var(--text-lg);
+    }
+
+    footer > p {
+        font-size: var(--text-sm);
+    }
+}

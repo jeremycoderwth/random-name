@@ -1,0 +1,151 @@
+@import 'defaults.css';
+
+body {
+  font-family: var(--primary-font);
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-black);
+}
+
+.images img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.about {
+    width: 100%;
+    padding: 2.2rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.about > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.left-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.section-headings {
+    text-align: center;
+}
+
+.section-headings h1 {
+    font-size: var(--text-5xl);
+    font-family: var(--secondary-font);
+    font-weight: var(--font-normal);
+    margin-bottom: .5rem;
+}
+
+.section-headings h2 {
+    font-size: var(--text-xl);
+    color: var(--accent-color);
+    font-weight: var(--font-normal);
+}
+
+.section-paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 80%;
+}
+
+.section-paragraphs > p {
+    font-family: var(--primary-font);
+    font-size: var(--text-xl);
+    color: var(--text-black);
+    text-align: justify;
+}
+
+.section-list {
+    padding: .6rem .5rem;
+}
+
+.section-list > ul {
+    font-family: var(--primary-font);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.section-list > ul > li {
+    color: var(--accent-color);
+    font-size: var(--text-xl)
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about > div {
+        width: 100%;
+    }
+
+    .section-list {
+        margin-bottom: 3rem;
+    }
+
+    .right-part {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .images {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .images > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .about {
+        padding: 0;
+    }
+
+    .left-part {
+        padding: 0 2rem;
+    }
+
+    .section-headings h1 {
+        font-size: var(--text-2xl);
+    }
+
+    .section-headings h2 {
+        font-size: var(--text-lg);
+    }
+
+    .section-paragraphs {
+        width: 100%;
+    }
+
+    .section-paragraphs p, .section-list > ul li {
+        font-size: var(--text-md);
+    }
+
+    .first-container > img {
+        width: 212px;
+    }
+
+    .second-container {
+        display: none !important;
+    }
+}
