@@ -88,6 +88,7 @@ header {
     width: 80%;
     gap: 0;
     justify-content: space-between;
+    padding: 0;
   }
 
   .logo img {
@@ -153,4 +154,5 @@ header {
     height: 110px;
     margin-right: 0;
   }
+
 }
